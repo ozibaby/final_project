@@ -14,6 +14,9 @@ library(gtsummary)
 # read in the cleaned data saved by clean-data.R
 majors_cats <- read_rds(here::here("data", "clean", "majors_clean.rds"))
 ```
+Introduction
+
+Some college majors are studied mostly by women, others mostly by men. This analysis asks a simple question: Do majors with more women in them lead to lower pay?
 
 Description of the Data
 
@@ -22,18 +25,18 @@ Major*, built from the American Community Survey 2010--2012 Public Use Microdata
 Sample. The file is available at
 <https://github.com/fivethirtyeight/data/tree/master/college-majors>.
 
-Each row is one undergraduate major, all findings below describe majors.
+Each row is one undergraduate major not a person, all findings below describe a typical graduate of that major earns. 
 The dataset covers `r nrow(majors_cats)` majors across `r n_distinct(majors_cats$Major_category)`
-broad Major categories. 
+broad fields like engineering, health and education. 
 Majors were split at a 50% threshold into those where women
 make up under half of graduates and those where women make up half or more.
 
-Majors where women make up at least half of graduates report substantially lower
-median earnings (@table1).
+The two groups earn very different amounts, majors where women make up at least half of graduates report substantially lower
+median earnings (@tbl-one).
 
 ```{r}
-#| label: table1
-#| tbl-cap: "TABLE 1: Characteristics of undergraduate majors, by gender"
+#| label: tbl-one
+#| tbl-cap: "Characteristics of undergraduate majors, by gender"
 #| message: false
 
 
@@ -59,7 +62,59 @@ table1
   
 ```
 
-Among women dominated majors, the median earning was
-`r inline_text(table1, variable = "Median", column = "stat_2", pattern = "{median}")` USD.
+Among women dominated majors, the typical graduate earns about $`r inline_text(table1, variable = "Median", column = "stat_2", pattern = "{median}")` USD.
 
+In majors where men dominate, it's about $`r inline_text(table1, variable = "Median" , column = "stat_1", pattern = "{median}")` USD a difference of roughly $11,000 a year.
 
+The unemployment row is almost identical between the two groups, aroung 6 to 7 percent. Graduates of women-dominated majors find jobs just as easily, they simply get paid less for them. 
+
+The regression we did uses the actual percentage and asks how much earnings change as the share of women goes up. Each additional percentage point of women in a major is associated with lower earnings, after adjusting for the unemployment rate (@tbl-two).
+
+```{r}
+#| label: tbl-two
+#| tbl-cap: "Table 2: Linear regression of median earnings on gender composition"
+
+#linear model 
+linear_model <- lm(Median ~ women_pct + unempl_pct,
+                   data = majors_cats)
+
+#regression table
+table2 <- tbl_regression(
+  linear_model,
+  intercept = TRUE,
+  label = list(
+    women_pct ~ "Women (%)",
+    unempl_pct ~ "Unemployment rate (%)"
+               )
+) |>
+  bold_labels()
+
+table2
+```
+
+The same pattern is visible across individual majors with engineering fields clustered at high earnings and low shares of women. Each dot in @fig-one is one major, the pattern as you move right towards majors with more women, the dots drift downward.
+
+```{r}
+#| label: fig-one
+#| fig-cap: "Median earnings and gender composition, by major category"
+#| warning: false
+
+earnings_plot <- ggplot(majors_cats,
+                        aes(x = women_pct, y = Median,
+                            color = Major_category)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "black") +
+  scale_y_continuous(labels = scales::comma) + #to correct the scientific notion
+  labs(subtitle = "Each point is one undergraduate major",
+       caption = "Source: FiveThirtyEight, American Community Survey 2010-2012",
+      x = "Graduates who are women (%)",
+       y = "Median earnings (USD)",
+       color = "Major category"
+  ) +
+  theme_minimal()
+
+earnings_plot
+
+```
+
+There is a clear pattern here, but a pattern isn't a cause. This analysis cannot tell us why majore with more women pay less, it could be various reasons which the data cannot separate. 

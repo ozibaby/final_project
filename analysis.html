@@ -73,29 +73,37 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Introduction</p>
+<p>Some college majors are studied mostly by women, others mostly by men. This analysis asks a simple question: Do majors with more women in them lead to lower pay?</p>
 <p>Description of the Data</p>
 <p>The data comes from FiveThirtyEight’s <em>The Economic Guide To Picking A College Major</em>, built from the American Community Survey 2010–2012 Public Use Microdata Sample. The file is available at <a href="https://github.com/fivethirtyeight/data/tree/master/college-majors" class="uri">https://github.com/fivethirtyeight/data/tree/master/college-majors</a>.</p>
-<p>Each row is one undergraduate major, all findings below describe majors. The dataset covers 173 majors across 16 broad Major categories. Majors were split at a 50% threshold into those where women make up under half of graduates and those where women make up half or more.</p>
-<p>Majors where women make up at least half of graduates report substantially lower median earnings (<span class="citation" data-cites="table1">@table1</span>).</p>
-<div class="cell" data-tbl-cap="TABLE 1: Characteristics of undergraduate majors, by gender">
+<p>Each row is one undergraduate major not a person, all findings below describe a typical graduate of that major earns. The dataset covers 173 majors across 16 broad fields like engineering, health and education. Majors were split at a 50% threshold into those where women make up under half of graduates and those where women make up half or more.</p>
+<p>The two groups earn very different amounts, majors where women make up at least half of graduates report substantially lower median earnings (<a href="#tbl-one" class="quarto-xref">Table&nbsp;1</a>).</p>
+<div class="cell">
+<div id="tbl-one" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Characteristics of undergraduate majors, by gender
+</figcaption>
+<div aria-describedby="tbl-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="yttrycxruf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#yttrycxruf table {
+<div id="qaetyarkuf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qaetyarkuf table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#yttrycxruf thead, #yttrycxruf tbody, #yttrycxruf tfoot, #yttrycxruf tr, #yttrycxruf td, #yttrycxruf th {
+#qaetyarkuf thead, #qaetyarkuf tbody, #qaetyarkuf tfoot, #qaetyarkuf tr, #qaetyarkuf td, #qaetyarkuf th {
   border-style: none;
 }
 
-#yttrycxruf p {
+#qaetyarkuf p {
   margin: 0;
   padding: 0;
 }
 
-#yttrycxruf .gt_table {
+#qaetyarkuf .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -121,12 +129,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#yttrycxruf .gt_caption {
+#qaetyarkuf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#yttrycxruf .gt_title {
+#qaetyarkuf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -138,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#yttrycxruf .gt_subtitle {
+#qaetyarkuf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -150,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#yttrycxruf .gt_heading {
+#qaetyarkuf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -162,13 +170,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#yttrycxruf .gt_bottom_border {
+#qaetyarkuf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#yttrycxruf .gt_col_headings {
+#qaetyarkuf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -183,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#yttrycxruf .gt_col_heading {
+#qaetyarkuf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -203,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#yttrycxruf .gt_column_spanner_outer {
+#qaetyarkuf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -215,15 +223,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#yttrycxruf .gt_column_spanner_outer:first-child {
+#qaetyarkuf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#yttrycxruf .gt_column_spanner_outer:last-child {
+#qaetyarkuf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#yttrycxruf .gt_column_spanner {
+#qaetyarkuf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -235,11 +243,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#yttrycxruf .gt_spanner_row {
+#qaetyarkuf .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#yttrycxruf .gt_group_heading {
+#qaetyarkuf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -265,7 +273,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#yttrycxruf .gt_empty_group_heading {
+#qaetyarkuf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -280,15 +288,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#yttrycxruf .gt_from_md > :first-child {
+#qaetyarkuf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#yttrycxruf .gt_from_md > :last-child {
+#qaetyarkuf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#yttrycxruf .gt_row {
+#qaetyarkuf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -307,7 +315,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#yttrycxruf .gt_stub {
+#qaetyarkuf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -320,7 +328,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#yttrycxruf .gt_stub_row_group {
+#qaetyarkuf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -334,15 +342,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#yttrycxruf .gt_row_group_first td {
+#qaetyarkuf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#yttrycxruf .gt_row_group_first th {
+#qaetyarkuf .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#yttrycxruf .gt_summary_row {
+#qaetyarkuf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -352,16 +360,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#yttrycxruf .gt_first_summary_row {
+#qaetyarkuf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#yttrycxruf .gt_first_summary_row.thick {
+#qaetyarkuf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#yttrycxruf .gt_last_summary_row {
+#qaetyarkuf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -371,7 +379,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#yttrycxruf .gt_grand_summary_row {
+#qaetyarkuf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -381,7 +389,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#yttrycxruf .gt_first_grand_summary_row {
+#qaetyarkuf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -391,7 +399,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#yttrycxruf .gt_last_grand_summary_row_top {
+#qaetyarkuf .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -401,11 +409,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#yttrycxruf .gt_striped {
+#qaetyarkuf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#yttrycxruf .gt_table_body {
+#qaetyarkuf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -414,7 +422,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#yttrycxruf .gt_footnotes {
+#qaetyarkuf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -428,7 +436,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#yttrycxruf .gt_footnote {
+#qaetyarkuf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -437,7 +445,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#yttrycxruf .gt_sourcenotes {
+#qaetyarkuf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -451,7 +459,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#yttrycxruf .gt_sourcenote {
+#qaetyarkuf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -459,78 +467,77 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#yttrycxruf .gt_left {
+#qaetyarkuf .gt_left {
   text-align: left;
 }
 
-#yttrycxruf .gt_center {
+#qaetyarkuf .gt_center {
   text-align: center;
 }
 
-#yttrycxruf .gt_right {
+#qaetyarkuf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#yttrycxruf .gt_font_normal {
+#qaetyarkuf .gt_font_normal {
   font-weight: normal;
 }
 
-#yttrycxruf .gt_font_bold {
+#qaetyarkuf .gt_font_bold {
   font-weight: bold;
 }
 
-#yttrycxruf .gt_font_italic {
+#qaetyarkuf .gt_font_italic {
   font-style: italic;
 }
 
-#yttrycxruf .gt_super {
+#qaetyarkuf .gt_super {
   font-size: 65%;
 }
 
-#yttrycxruf .gt_footnote_marks {
+#qaetyarkuf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#yttrycxruf .gt_asterisk {
+#qaetyarkuf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#yttrycxruf .gt_indent_1 {
+#qaetyarkuf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#yttrycxruf .gt_indent_2 {
+#qaetyarkuf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#yttrycxruf .gt_indent_3 {
+#qaetyarkuf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#yttrycxruf .gt_indent_4 {
+#qaetyarkuf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#yttrycxruf .gt_indent_5 {
+#qaetyarkuf .gt_indent_5 {
   text-indent: 25px;
 }
 
-#yttrycxruf .katex-display {
+#qaetyarkuf .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#yttrycxruf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#qaetyarkuf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 
-<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
-<caption>TABLE 1: Characteristics of undergraduate majors, by gender</caption>
+<table class="gt_table cell caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -580,7 +587,529 @@ N = 96<span class="gt_footnote_marks" style="white-space:nowrap;font-style:itali
 </div>
 </div>
 </div>
-<p>Among women dominated majors, the median earnings were 34,000 USD.</p>
+</figure>
+</div>
+</div>
+<p>Among women dominated majors, the typical graduate earns about $34,000 USD.</p>
+<p>In majors where men dominate, it’s about $45,000 USD a difference of roughly $11,000 a year.</p>
+<p>The unemployment row is almost identical between the two groups, aroung 6 to 7 percent. Graduates of women-dominated majors find jobs just as easily, they simply get paid less for them.</p>
+<p>The regression we did uses the actual percentage and asks how much earnings change as the share of women goes up. Each additional percentage point of women in a major is associated with lower earnings, after adjusting for the unemployment rate (<a href="#tbl-two" class="quarto-xref">Table&nbsp;2</a>).</p>
+<div class="cell">
+<div id="tbl-two" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-two-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Table 2: Linear regression of median earnings on gender composition
+</figcaption>
+<div aria-describedby="tbl-two-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div id="uilajkhjwl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uilajkhjwl table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#uilajkhjwl thead, #uilajkhjwl tbody, #uilajkhjwl tfoot, #uilajkhjwl tr, #uilajkhjwl td, #uilajkhjwl th {
+  border-style: none;
+}
+
+#uilajkhjwl p {
+  margin: 0;
+  padding: 0;
+}
+
+#uilajkhjwl .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#uilajkhjwl .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#uilajkhjwl .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#uilajkhjwl .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#uilajkhjwl .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#uilajkhjwl .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uilajkhjwl .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#uilajkhjwl .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#uilajkhjwl .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#uilajkhjwl .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#uilajkhjwl .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#uilajkhjwl .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#uilajkhjwl .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#uilajkhjwl .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#uilajkhjwl .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#uilajkhjwl .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#uilajkhjwl .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#uilajkhjwl .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#uilajkhjwl .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uilajkhjwl .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#uilajkhjwl .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#uilajkhjwl .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#uilajkhjwl .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uilajkhjwl .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#uilajkhjwl .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#uilajkhjwl .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uilajkhjwl .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uilajkhjwl .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#uilajkhjwl .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uilajkhjwl .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#uilajkhjwl .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uilajkhjwl .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#uilajkhjwl .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uilajkhjwl .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#uilajkhjwl .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uilajkhjwl .gt_left {
+  text-align: left;
+}
+
+#uilajkhjwl .gt_center {
+  text-align: center;
+}
+
+#uilajkhjwl .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#uilajkhjwl .gt_font_normal {
+  font-weight: normal;
+}
+
+#uilajkhjwl .gt_font_bold {
+  font-weight: bold;
+}
+
+#uilajkhjwl .gt_font_italic {
+  font-style: italic;
+}
+
+#uilajkhjwl .gt_super {
+  font-size: 65%;
+}
+
+#uilajkhjwl .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#uilajkhjwl .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#uilajkhjwl .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#uilajkhjwl .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#uilajkhjwl .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#uilajkhjwl .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#uilajkhjwl .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#uilajkhjwl .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#uilajkhjwl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table cell caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Characteristic</strong></th>
+<th id="estimate" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Beta</strong></th>
+<th id="conf.low" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>95% CI</strong></th>
+<th id="p.value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>p-value</strong></th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">(Intercept)</td>
+<td class="gt_row gt_center" headers="estimate">57,780</td>
+<td class="gt_row gt_center" headers="conf.low">53,381, 62,178</td>
+<td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Women (%)</td>
+<td class="gt_row gt_center" headers="estimate">-304</td>
+<td class="gt_row gt_center" headers="conf.low">-363, -245</td>
+<td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Unemployment rate (%)</td>
+<td class="gt_row gt_center" headers="estimate">-268</td>
+<td class="gt_row gt_center" headers="conf.low">-718, 182</td>
+<td class="gt_row gt_center" headers="p.value">0.2</td>
+</tr>
+</tbody><tfoot>
+<tr class="gt_sourcenotes odd">
+<td colspan="4" class="gt_sourcenote">Abbreviation: CI = Confidence Interval</td>
+</tr>
+</tfoot>
+
+</table>
+
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>The same pattern is visible across individual majors with engineering fields clustered at high earnings and low shares of women. Each dot in <a href="#fig-one" class="quarto-xref">Figure&nbsp;1</a> is one major, the pattern as you move right towards majors with more women, the dots drift downward.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-one" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="analysis_files/figure-html/fig-one-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Median earnings and gender composition, by major category
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>There is a clear pattern here, but a pattern isn’t a cause. This analysis cannot tell us why majore with more women pay less, it could be various reasons which the data cannot separate.</p>
 
 </main>
 <!-- /main column -->
