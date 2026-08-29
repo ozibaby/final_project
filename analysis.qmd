@@ -6,23 +6,60 @@ execute:
   echo: false
 ---
 
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
 ```{r}
-1 + 1
+#| message: false
+library(tidyverse)
+library(gtsummary)
+
+# read in the cleaned data saved by clean-data.R
+majors_cats <- read_rds(here::here("data", "clean", "majors_clean.rds"))
 ```
 
-You can add options to executable code like this
+Description of the Data
+
+The data comes from FiveThirtyEight's *The Economic Guide To Picking A College
+Major*, built from the American Community Survey 2010--2012 Public Use Microdata
+Sample. The file is available at
+<https://github.com/fivethirtyeight/data/tree/master/college-majors>.
+
+Each row is one undergraduate major, all findings below describe majors.
+The dataset covers `r nrow(majors_cats)` majors across `r n_distinct(majors_cats$Major_category)`
+broad Major categories. 
+Majors were split at a 50% threshold into those where women
+make up under half of graduates and those where women make up half or more.
+
+Majors where women make up at least half of graduates report substantially lower
+median earnings (@table1).
 
 ```{r}
-#| echo: false
-2 * 2
+#| label: table1
+#| tbl-cap: "TABLE 1: Characteristics of undergraduate majors, by gender"
+#| message: false
+
+
+table1 <- tbl_summary(
+  majors_cats,
+  by = women_cat,
+  include = c(Median, unempl_pct, Total),
+  label = list(
+    Median ~ "Median earnings (USD)",
+    unempl_pct ~ "Unemployment rate (%)",
+    Total ~ "Number of graduates"
+  ),
+  missing_text = "Missing")|>
+  
+  # test whether the two groups differ
+  add_p(test = all_continuous() ~ "t.test")|>
+  bold_labels() |>
+  
+  # rename and bold the first and last column headers
+  modify_header(label = "**Characteristic**", p.value = "**P-value**")
+
+table1
+  
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+Among women dominated majors, the median earning was
+`r inline_text(table1, variable = "Median", column = "stat_2", pattern = "{median}")` USD.
+
+
