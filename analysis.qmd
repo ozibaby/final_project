@@ -14,18 +14,18 @@ library(gtsummary)
 # read in the cleaned data saved by clean-data.R
 majors_cats <- read_rds(here::here("data", "clean", "majors_clean.rds"))
 ```
-Introduction
+##Introduction
 
 Some college majors are studied mostly by women, others mostly by men. This analysis asks a simple question: Do majors with more women in them lead to lower pay?
 
-Description of the Data
+##Description of the Data
 
 The data comes from FiveThirtyEight's *The Economic Guide To Picking A College
 Major*, built from the American Community Survey 2010--2012 Public Use Microdata
 Sample. The file is available at
 <https://github.com/fivethirtyeight/data/tree/master/college-majors>.
 
-Each row is one undergraduate major not a person, all findings below describe a typical graduate of that major earns. 
+Each row is one undergraduate major not a person. Each row tells you what a typical graduate of that major earns, not what any particular graduate earns.
 The dataset covers `r nrow(majors_cats)` majors across `r n_distinct(majors_cats$Major_category)`
 broad fields like engineering, health and education. 
 Majors were split at a 50% threshold into those where women
@@ -64,15 +64,15 @@ table1
 
 Among women dominated majors, the typical graduate earns about $`r inline_text(table1, variable = "Median", column = "stat_2", pattern = "{median}")` USD.
 
-In majors where men dominate, it's about $`r inline_text(table1, variable = "Median" , column = "stat_1", pattern = "{median}")` USD a difference of roughly $11,000 a year.
+In majors where men dominate, it's about $`r inline_text(table1, variable = "Median" , column = "stat_1", pattern = "{median}")` USD a substantial difference.
 
-The unemployment row is almost identical between the two groups, aroung 6 to 7 percent. Graduates of women-dominated majors find jobs just as easily, they simply get paid less for them. 
+The unemployment row is almost identical between the two groups. Graduates of women-dominated majors find jobs just as easily, they simply get paid less for them. 
 
 The regression we did uses the actual percentage and asks how much earnings change as the share of women goes up. Each additional percentage point of women in a major is associated with lower earnings, after adjusting for the unemployment rate (@tbl-two).
 
 ```{r}
 #| label: tbl-two
-#| tbl-cap: "Table 2: Linear regression of median earnings on gender composition"
+#| tbl-cap: "Linear regression of median earnings on gender composition"
 
 #linear model 
 linear_model <- lm(Median ~ women_pct + unempl_pct,
@@ -117,4 +117,4 @@ earnings_plot
 
 ```
 
-There is a clear pattern here, but a pattern isn't a cause. This analysis cannot tell us why majore with more women pay less, it could be various reasons which the data cannot separate. 
+There is a clear pattern here, but a pattern isn't a cause. This analysis cannot tell us why majors with more women pay less, it could be various reasons which the data cannot separate. 

@@ -9,7 +9,10 @@ earnings_plot <- ggplot(majors_cats,
   geom_point(alpha = 0.6) +
   geom_smooth(method = "lm", color = "black") +
   scale_y_continuous(labels = scales::comma) + #to correct the scientific notion
-  labs(x = "Graduates who are women (%)",
+  labs(title = "Median earnings and gender composition, by major category",
+       subtitle = "Each point is one undergraduate major",
+       caption = "Source: FiveThirtyEight, American Community Survey 2010-2012",
+      x = "Graduates who are women (%)",
        y = "Median earnings (USD)",
        color = "Major category"
   ) +
