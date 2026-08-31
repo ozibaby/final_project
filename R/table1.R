@@ -4,6 +4,26 @@ library(gtsummary)
 # read in the cleaned data saved by clean-data.R
 majors_cats <- read_rds(here::here("data", "clean", "majors_clean.rds"))
 
+# basic description of all majors
+table0 <- tbl_summary(
+  majors_cats,
+  include = c(women_pct, Median, unempl_pct),
+  label = list(
+    women_pct ~ "Women Graduates(%)",
+    Median ~ "Median earnings (USD)",
+    unempl_pct ~ "Unemployment rate (%)"
+  ),
+  statistic = all_continuous() ~ "{median}",
+  missing_text = "Missing"
+) |>
+  bold_labels() |>
+
+# add a title
+modify_caption("**Table 0. Characteristics of undergraduate majors**") 
+
+
+table0
+
 # descriptive table stratified by gender composition of the major
 table1 <- tbl_summary(
   majors_cats,

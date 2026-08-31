@@ -13,7 +13,8 @@ Required so that 'here::here()' resolves paths correctly.
 
 3. Rune 'R/clean/majors_clean.rds first, this reads the raw CSV and writes
 'data/clea/majors_clean.rds.
-Render 'analysis.qmd'
+
+4. Render 'analysis.qmd'
 
 **IMPORTANT**
 Step 3 must run before step 4, if you change the raw data and only re-render

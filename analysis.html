@@ -77,33 +77,33 @@ ul.task-list li input[type="checkbox"] {
 <p>Some college majors are studied mostly by women, others mostly by men. This analysis asks a simple question: Do majors with more women in them lead to lower pay?</p>
 <p>##Description of the Data</p>
 <p>The data comes from FiveThirtyEight’s <em>The Economic Guide To Picking A College Major</em>, built from the American Community Survey 2010–2012 Public Use Microdata Sample. The file is available at <a href="https://github.com/fivethirtyeight/data/tree/master/college-majors" class="uri">https://github.com/fivethirtyeight/data/tree/master/college-majors</a>.</p>
-<p>Each row is one undergraduate major not a person. Each row tells you what a typical graduate of that major earns, not what any particular graduate earns. The dataset covers 173 majors across 16 broad fields like engineering, health and education. Majors were split at a 50% threshold into those where women make up under half of graduates and those where women make up half or more.</p>
-<p>The two groups earn very different amounts, majors where women make up at least half of graduates report substantially lower median earnings (<a href="#tbl-one" class="quarto-xref">Table&nbsp;1</a>).</p>
+<p>Each row is one undergraduate major not a person. Each row tells you what a typical graduate of that major earns, not what any particular graduate earns. The dataset covers 173 majors across 16 broad fields like engineering, health and education.</p>
+<p>Before comparing groups, here is what these majors look like overall (<a href="#tbl-zero" class="quarto-xref">Table&nbsp;1</a>). Each number describes the median of all of them.</p>
 <div class="cell">
-<div id="tbl-one" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<div id="tbl-zero" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Characteristics of undergraduate majors, by gender
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-zero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Characteristics of undergraduate majors
 </figcaption>
-<div aria-describedby="tbl-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-zero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="souocrchtr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#souocrchtr table {
+<div id="hzxtisgmfa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hzxtisgmfa table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#souocrchtr thead, #souocrchtr tbody, #souocrchtr tfoot, #souocrchtr tr, #souocrchtr td, #souocrchtr th {
+#hzxtisgmfa thead, #hzxtisgmfa tbody, #hzxtisgmfa tfoot, #hzxtisgmfa tr, #hzxtisgmfa td, #hzxtisgmfa th {
   border-style: none;
 }
 
-#souocrchtr p {
+#hzxtisgmfa p {
   margin: 0;
   padding: 0;
 }
 
-#souocrchtr .gt_table {
+#hzxtisgmfa .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -129,12 +129,12 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   border-left-color: #D3D3D3;
 }
 
-#souocrchtr .gt_caption {
+#hzxtisgmfa .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#souocrchtr .gt_title {
+#hzxtisgmfa .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -146,7 +146,7 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   border-bottom-width: 0;
 }
 
-#souocrchtr .gt_subtitle {
+#hzxtisgmfa .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -158,7 +158,7 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   border-top-width: 0;
 }
 
-#souocrchtr .gt_heading {
+#hzxtisgmfa .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -170,13 +170,13 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   border-right-color: #D3D3D3;
 }
 
-#souocrchtr .gt_bottom_border {
+#hzxtisgmfa .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#souocrchtr .gt_col_headings {
+#hzxtisgmfa .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -191,7 +191,7 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   border-right-color: #D3D3D3;
 }
 
-#souocrchtr .gt_col_heading {
+#hzxtisgmfa .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -211,7 +211,7 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   overflow-x: hidden;
 }
 
-#souocrchtr .gt_column_spanner_outer {
+#hzxtisgmfa .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -223,15 +223,15 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   padding-right: 4px;
 }
 
-#souocrchtr .gt_column_spanner_outer:first-child {
+#hzxtisgmfa .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#souocrchtr .gt_column_spanner_outer:last-child {
+#hzxtisgmfa .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#souocrchtr .gt_column_spanner {
+#hzxtisgmfa .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -243,11 +243,11 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   width: 100%;
 }
 
-#souocrchtr .gt_spanner_row {
+#hzxtisgmfa .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#souocrchtr .gt_group_heading {
+#hzxtisgmfa .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -273,7 +273,7 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   text-align: left;
 }
 
-#souocrchtr .gt_empty_group_heading {
+#hzxtisgmfa .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -288,15 +288,15 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   vertical-align: middle;
 }
 
-#souocrchtr .gt_from_md > :first-child {
+#hzxtisgmfa .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#souocrchtr .gt_from_md > :last-child {
+#hzxtisgmfa .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#souocrchtr .gt_row {
+#hzxtisgmfa .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -315,7 +315,7 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   overflow-x: hidden;
 }
 
-#souocrchtr .gt_stub {
+#hzxtisgmfa .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -328,7 +328,7 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   padding-right: 5px;
 }
 
-#souocrchtr .gt_stub_row_group {
+#hzxtisgmfa .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -342,15 +342,15 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   vertical-align: top;
 }
 
-#souocrchtr .gt_row_group_first td {
+#hzxtisgmfa .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#souocrchtr .gt_row_group_first th {
+#hzxtisgmfa .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#souocrchtr .gt_summary_row {
+#hzxtisgmfa .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -360,16 +360,16 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   padding-right: 5px;
 }
 
-#souocrchtr .gt_first_summary_row {
+#hzxtisgmfa .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#souocrchtr .gt_first_summary_row.thick {
+#hzxtisgmfa .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#souocrchtr .gt_last_summary_row {
+#hzxtisgmfa .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -379,7 +379,7 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   border-bottom-color: #D3D3D3;
 }
 
-#souocrchtr .gt_grand_summary_row {
+#hzxtisgmfa .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -389,7 +389,7 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   padding-right: 5px;
 }
 
-#souocrchtr .gt_first_grand_summary_row {
+#hzxtisgmfa .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -399,7 +399,7 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   border-top-color: #D3D3D3;
 }
 
-#souocrchtr .gt_last_grand_summary_row_top {
+#hzxtisgmfa .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -409,11 +409,11 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   border-bottom-color: #D3D3D3;
 }
 
-#souocrchtr .gt_striped {
+#hzxtisgmfa .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#souocrchtr .gt_table_body {
+#hzxtisgmfa .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -422,7 +422,7 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   border-bottom-color: #D3D3D3;
 }
 
-#souocrchtr .gt_footnotes {
+#hzxtisgmfa .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -436,7 +436,7 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   border-right-color: #D3D3D3;
 }
 
-#souocrchtr .gt_footnote {
+#hzxtisgmfa .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -445,7 +445,7 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   padding-right: 5px;
 }
 
-#souocrchtr .gt_sourcenotes {
+#hzxtisgmfa .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -459,7 +459,7 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   border-right-color: #D3D3D3;
 }
 
-#souocrchtr .gt_sourcenote {
+#hzxtisgmfa .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -467,72 +467,571 @@ Table&nbsp;1: Characteristics of undergraduate majors, by gender
   padding-right: 5px;
 }
 
-#souocrchtr .gt_left {
+#hzxtisgmfa .gt_left {
   text-align: left;
 }
 
-#souocrchtr .gt_center {
+#hzxtisgmfa .gt_center {
   text-align: center;
 }
 
-#souocrchtr .gt_right {
+#hzxtisgmfa .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#souocrchtr .gt_font_normal {
+#hzxtisgmfa .gt_font_normal {
   font-weight: normal;
 }
 
-#souocrchtr .gt_font_bold {
+#hzxtisgmfa .gt_font_bold {
   font-weight: bold;
 }
 
-#souocrchtr .gt_font_italic {
+#hzxtisgmfa .gt_font_italic {
   font-style: italic;
 }
 
-#souocrchtr .gt_super {
+#hzxtisgmfa .gt_super {
   font-size: 65%;
 }
 
-#souocrchtr .gt_footnote_marks {
+#hzxtisgmfa .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#souocrchtr .gt_asterisk {
+#hzxtisgmfa .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#souocrchtr .gt_indent_1 {
+#hzxtisgmfa .gt_indent_1 {
   text-indent: 5px;
 }
 
-#souocrchtr .gt_indent_2 {
+#hzxtisgmfa .gt_indent_2 {
   text-indent: 10px;
 }
 
-#souocrchtr .gt_indent_3 {
+#hzxtisgmfa .gt_indent_3 {
   text-indent: 15px;
 }
 
-#souocrchtr .gt_indent_4 {
+#hzxtisgmfa .gt_indent_4 {
   text-indent: 20px;
 }
 
-#souocrchtr .gt_indent_5 {
+#hzxtisgmfa .gt_indent_5 {
   text-indent: 25px;
 }
 
-#souocrchtr .katex-display {
+#hzxtisgmfa .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#souocrchtr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#hzxtisgmfa div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table cell caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Characteristic</strong></th>
+<th id="stat_0" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>N = 173</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Women Graduates(%)</td>
+<td class="gt_row gt_center" headers="stat_0">53</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Missing</td>
+<td class="gt_row gt_center" headers="stat_0">1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Median earnings (USD)</td>
+<td class="gt_row gt_center" headers="stat_0">36,000</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Unemployment rate (%)</td>
+<td class="gt_row gt_center" headers="stat_0">6.80</td>
+</tr>
+</tbody><tfoot>
+<tr class="gt_footnotes odd">
+<td colspan="2" class="gt_footnote"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> Median</td>
+</tr>
+</tfoot>
+
+</table>
+
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>So the typical major is 53 percent women dominated, pays about $36,000 USD a year, and has about 6.80 percent of its graduate out of work.</p>
+<p>Majors were sorted into two groups based on the share of graduates who are women. Where women make up less than half the major is counted as ‘Male Dominated’, where they make up half or more, it is counted as ‘female-domainted’.</p>
+<p>Looking at it this way, we see the two groups earn very different amounts, majors where women make up at least half of graduates report substantially lower median earnings (<a href="#tbl-one" class="quarto-xref">Table&nbsp;2</a>).</p>
+<div class="cell">
+<div id="tbl-one" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Characteristics of undergraduate majors, by gender
+</figcaption>
+<div aria-describedby="tbl-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div id="hwazsetkuu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hwazsetkuu table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#hwazsetkuu thead, #hwazsetkuu tbody, #hwazsetkuu tfoot, #hwazsetkuu tr, #hwazsetkuu td, #hwazsetkuu th {
+  border-style: none;
+}
+
+#hwazsetkuu p {
+  margin: 0;
+  padding: 0;
+}
+
+#hwazsetkuu .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#hwazsetkuu .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#hwazsetkuu .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#hwazsetkuu .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#hwazsetkuu .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hwazsetkuu .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hwazsetkuu .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hwazsetkuu .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#hwazsetkuu .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#hwazsetkuu .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#hwazsetkuu .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#hwazsetkuu .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#hwazsetkuu .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#hwazsetkuu .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#hwazsetkuu .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#hwazsetkuu .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#hwazsetkuu .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#hwazsetkuu .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#hwazsetkuu .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hwazsetkuu .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#hwazsetkuu .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#hwazsetkuu .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#hwazsetkuu .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hwazsetkuu .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#hwazsetkuu .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#hwazsetkuu .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hwazsetkuu .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hwazsetkuu .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#hwazsetkuu .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hwazsetkuu .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#hwazsetkuu .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hwazsetkuu .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hwazsetkuu .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hwazsetkuu .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hwazsetkuu .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hwazsetkuu .gt_left {
+  text-align: left;
+}
+
+#hwazsetkuu .gt_center {
+  text-align: center;
+}
+
+#hwazsetkuu .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#hwazsetkuu .gt_font_normal {
+  font-weight: normal;
+}
+
+#hwazsetkuu .gt_font_bold {
+  font-weight: bold;
+}
+
+#hwazsetkuu .gt_font_italic {
+  font-style: italic;
+}
+
+#hwazsetkuu .gt_super {
+  font-size: 65%;
+}
+
+#hwazsetkuu .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#hwazsetkuu .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#hwazsetkuu .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#hwazsetkuu .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#hwazsetkuu .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#hwazsetkuu .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#hwazsetkuu .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#hwazsetkuu .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#hwazsetkuu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -593,32 +1092,32 @@ N = 96<span class="gt_footnote_marks" style="white-space:nowrap;font-style:itali
 <p>Among women dominated majors, the typical graduate earns about $34,000 USD.</p>
 <p>In majors where men dominate, it’s about $45,000 USD a substantial difference.</p>
 <p>The unemployment row is almost identical between the two groups. Graduates of women-dominated majors find jobs just as easily, they simply get paid less for them.</p>
-<p>The regression we did uses the actual percentage and asks how much earnings change as the share of women goes up. Each additional percentage point of women in a major is associated with lower earnings, after adjusting for the unemployment rate (<a href="#tbl-two" class="quarto-xref">Table&nbsp;2</a>).</p>
+<p>The regression uses the actual percentage and asks how much earnings change as the share of women goes up.(<a href="#tbl-two" class="quarto-xref">Table&nbsp;3</a>).</p>
 <div class="cell">
 <div id="tbl-two" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-two-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: Linear regression of median earnings on gender composition
+Table&nbsp;3: Linear regression of median earnings on gender composition
 </figcaption>
 <div aria-describedby="tbl-two-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="victivkpsy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#victivkpsy table {
+<div id="vygjyvgagw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vygjyvgagw table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#victivkpsy thead, #victivkpsy tbody, #victivkpsy tfoot, #victivkpsy tr, #victivkpsy td, #victivkpsy th {
+#vygjyvgagw thead, #vygjyvgagw tbody, #vygjyvgagw tfoot, #vygjyvgagw tr, #vygjyvgagw td, #vygjyvgagw th {
   border-style: none;
 }
 
-#victivkpsy p {
+#vygjyvgagw p {
   margin: 0;
   padding: 0;
 }
 
-#victivkpsy .gt_table {
+#vygjyvgagw .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -644,12 +1143,12 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   border-left-color: #D3D3D3;
 }
 
-#victivkpsy .gt_caption {
+#vygjyvgagw .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#victivkpsy .gt_title {
+#vygjyvgagw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -661,7 +1160,7 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   border-bottom-width: 0;
 }
 
-#victivkpsy .gt_subtitle {
+#vygjyvgagw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -673,7 +1172,7 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   border-top-width: 0;
 }
 
-#victivkpsy .gt_heading {
+#vygjyvgagw .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -685,13 +1184,13 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   border-right-color: #D3D3D3;
 }
 
-#victivkpsy .gt_bottom_border {
+#vygjyvgagw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#victivkpsy .gt_col_headings {
+#vygjyvgagw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -706,7 +1205,7 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   border-right-color: #D3D3D3;
 }
 
-#victivkpsy .gt_col_heading {
+#vygjyvgagw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -726,7 +1225,7 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   overflow-x: hidden;
 }
 
-#victivkpsy .gt_column_spanner_outer {
+#vygjyvgagw .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -738,15 +1237,15 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   padding-right: 4px;
 }
 
-#victivkpsy .gt_column_spanner_outer:first-child {
+#vygjyvgagw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#victivkpsy .gt_column_spanner_outer:last-child {
+#vygjyvgagw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#victivkpsy .gt_column_spanner {
+#vygjyvgagw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -758,11 +1257,11 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   width: 100%;
 }
 
-#victivkpsy .gt_spanner_row {
+#vygjyvgagw .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#victivkpsy .gt_group_heading {
+#vygjyvgagw .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -788,7 +1287,7 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   text-align: left;
 }
 
-#victivkpsy .gt_empty_group_heading {
+#vygjyvgagw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -803,15 +1302,15 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   vertical-align: middle;
 }
 
-#victivkpsy .gt_from_md > :first-child {
+#vygjyvgagw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#victivkpsy .gt_from_md > :last-child {
+#vygjyvgagw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#victivkpsy .gt_row {
+#vygjyvgagw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -830,7 +1329,7 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   overflow-x: hidden;
 }
 
-#victivkpsy .gt_stub {
+#vygjyvgagw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -843,7 +1342,7 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   padding-right: 5px;
 }
 
-#victivkpsy .gt_stub_row_group {
+#vygjyvgagw .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -857,15 +1356,15 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   vertical-align: top;
 }
 
-#victivkpsy .gt_row_group_first td {
+#vygjyvgagw .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#victivkpsy .gt_row_group_first th {
+#vygjyvgagw .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#victivkpsy .gt_summary_row {
+#vygjyvgagw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -875,16 +1374,16 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   padding-right: 5px;
 }
 
-#victivkpsy .gt_first_summary_row {
+#vygjyvgagw .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#victivkpsy .gt_first_summary_row.thick {
+#vygjyvgagw .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#victivkpsy .gt_last_summary_row {
+#vygjyvgagw .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -894,7 +1393,7 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   border-bottom-color: #D3D3D3;
 }
 
-#victivkpsy .gt_grand_summary_row {
+#vygjyvgagw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -904,7 +1403,7 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   padding-right: 5px;
 }
 
-#victivkpsy .gt_first_grand_summary_row {
+#vygjyvgagw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -914,7 +1413,7 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   border-top-color: #D3D3D3;
 }
 
-#victivkpsy .gt_last_grand_summary_row_top {
+#vygjyvgagw .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -924,11 +1423,11 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   border-bottom-color: #D3D3D3;
 }
 
-#victivkpsy .gt_striped {
+#vygjyvgagw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#victivkpsy .gt_table_body {
+#vygjyvgagw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -937,7 +1436,7 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   border-bottom-color: #D3D3D3;
 }
 
-#victivkpsy .gt_footnotes {
+#vygjyvgagw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -951,7 +1450,7 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   border-right-color: #D3D3D3;
 }
 
-#victivkpsy .gt_footnote {
+#vygjyvgagw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -960,7 +1459,7 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   padding-right: 5px;
 }
 
-#victivkpsy .gt_sourcenotes {
+#vygjyvgagw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -974,7 +1473,7 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   border-right-color: #D3D3D3;
 }
 
-#victivkpsy .gt_sourcenote {
+#vygjyvgagw .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -982,72 +1481,72 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
   padding-right: 5px;
 }
 
-#victivkpsy .gt_left {
+#vygjyvgagw .gt_left {
   text-align: left;
 }
 
-#victivkpsy .gt_center {
+#vygjyvgagw .gt_center {
   text-align: center;
 }
 
-#victivkpsy .gt_right {
+#vygjyvgagw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#victivkpsy .gt_font_normal {
+#vygjyvgagw .gt_font_normal {
   font-weight: normal;
 }
 
-#victivkpsy .gt_font_bold {
+#vygjyvgagw .gt_font_bold {
   font-weight: bold;
 }
 
-#victivkpsy .gt_font_italic {
+#vygjyvgagw .gt_font_italic {
   font-style: italic;
 }
 
-#victivkpsy .gt_super {
+#vygjyvgagw .gt_super {
   font-size: 65%;
 }
 
-#victivkpsy .gt_footnote_marks {
+#vygjyvgagw .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#victivkpsy .gt_asterisk {
+#vygjyvgagw .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#victivkpsy .gt_indent_1 {
+#vygjyvgagw .gt_indent_1 {
   text-indent: 5px;
 }
 
-#victivkpsy .gt_indent_2 {
+#vygjyvgagw .gt_indent_2 {
   text-indent: 10px;
 }
 
-#victivkpsy .gt_indent_3 {
+#vygjyvgagw .gt_indent_3 {
   text-indent: 15px;
 }
 
-#victivkpsy .gt_indent_4 {
+#vygjyvgagw .gt_indent_4 {
   text-indent: 20px;
 }
 
-#victivkpsy .gt_indent_5 {
+#vygjyvgagw .gt_indent_5 {
   text-indent: 25px;
 }
 
-#victivkpsy .katex-display {
+#vygjyvgagw .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#victivkpsy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#vygjyvgagw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1094,7 +1593,8 @@ Table&nbsp;2: Linear regression of median earnings on gender composition
 </figure>
 </div>
 </div>
-<p>The same pattern is visible across individual majors with engineering fields clustered at high earnings and low shares of women. Each dot in <a href="#fig-one" class="quarto-xref">Figure&nbsp;1</a> is one major, the pattern as you move right towards majors with more women, the dots drift downward.</p>
+<p>For every one percent of women in a major, the typical pay changes by $-304 USD.</p>
+<p>Each dot in <a href="#fig-one" class="quarto-xref">Figure&nbsp;1</a> is one major, the pattern as you move right towards majors with more women, the dots drift downward.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-one" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1110,6 +1610,8 @@ Figure&nbsp;1: Median earnings and gender composition, by major category
 </div>
 </div>
 <p>There is a clear pattern here, but a pattern isn’t a cause. This analysis cannot tell us why majors with more women pay less, it could be various reasons which the data cannot separate.</p>
+<p>It is also important that pay here covers <em>everyone</em> who graduated from a major, men and women together. The data does not report what men and women earn separately. So this is not a finding about women being paid less than men for the same work. It is a finding about which fields pay well and who ends up in them.</p>
+<p>Finally, each row is a major, not a person, so nothing here describes what any individual graduate earns.</p>
 
 </main>
 <!-- /main column -->

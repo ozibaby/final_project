@@ -28,10 +28,37 @@ Sample. The file is available at
 Each row is one undergraduate major not a person. Each row tells you what a typical graduate of that major earns, not what any particular graduate earns.
 The dataset covers `r nrow(majors_cats)` majors across `r n_distinct(majors_cats$Major_category)`
 broad fields like engineering, health and education. 
-Majors were split at a 50% threshold into those where women
-make up under half of graduates and those where women make up half or more.
 
-The two groups earn very different amounts, majors where women make up at least half of graduates report substantially lower
+##Data Analysis
+
+Before comparing groups, here is what these majors look like overall (@tbl-zero). Each number describes the median of all of them. 
+
+```{r}
+#| label: tbl-zero
+#| tbl-cap: "Characteristics of undergraduate majors"
+#| message: false
+
+table0 <- tbl_summary(
+  majors_cats,
+  include = c(women_pct, Median, unempl_pct),
+  label = list(
+    women_pct ~ "Women Graduates(%)",
+    Median ~ "Median earnings (USD)",
+    unempl_pct ~ "Unemployment rate (%)"
+  ),
+  statistic = all_continuous() ~ "{median}",
+  missing_text = "Missing"
+) |>
+  bold_labels()
+
+table0
+```
+
+So the typical major is `r inline_text(table0, variable = "women_pct", column = "stat_0")` percent women dominated, pays about $`r inline_text(table0, variable = "Median", column = "stat_0", pattern = "{median}")` USD a year, and has about `r inline_text(table0, variable = "unempl_pct", column = "stat_0")` percent of its graduate out of work.  
+
+Majors were sorted into two groups based on the share of graduates who are women. Where women make up less than half the major is counted as 'Male Dominated', where they make up half or more, it is counted as 'Female-dominated'.
+
+Looking at it this way, we see the two groups earn very different amounts, majors where women make up at least half of graduates report substantially lower
 median earnings (@tbl-one).
 
 ```{r}
@@ -68,7 +95,7 @@ In majors where men dominate, it's about $`r inline_text(table1, variable = "Med
 
 The unemployment row is almost identical between the two groups. Graduates of women-dominated majors find jobs just as easily, they simply get paid less for them. 
 
-The regression we did uses the actual percentage and asks how much earnings change as the share of women goes up. Each additional percentage point of women in a major is associated with lower earnings, after adjusting for the unemployment rate (@tbl-two).
+The regression uses the actual percentage and asks how much earnings change as the share of women goes up.(@tbl-two).
 
 ```{r}
 #| label: tbl-two
@@ -92,7 +119,9 @@ table2 <- tbl_regression(
 table2
 ```
 
-The same pattern is visible across individual majors with engineering fields clustered at high earnings and low shares of women. Each dot in @fig-one is one major, the pattern as you move right towards majors with more women, the dots drift downward.
+For every one percent of women in a major, the typical pay changes by $`r inline_text(table2, variable = "women_pct", pattern = "{estimate}")` USD.
+
+Each dot in (@fig-one) is one major, the pattern as you move right towards majors with more women, the dots drift downward.
 
 ```{r}
 #| label: fig-one
@@ -117,4 +146,15 @@ earnings_plot
 
 ```
 
+##Conclusion
+
 There is a clear pattern here, but a pattern isn't a cause. This analysis cannot tell us why majors with more women pay less, it could be various reasons which the data cannot separate. 
+
+It is also important that pay here covers *everyone* who graduated from a major,
+men and women together. The data does not report what men and women earn
+separately. So this is not a finding about women being paid less than men for
+the same work. It is a finding about which fields pay well and who ends up in
+them.
+
+Finally, each row is a major, not a person, so nothing here describes what any
+individual graduate earns.
