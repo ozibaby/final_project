@@ -9,7 +9,7 @@ majors <- read_csv(here::here("data", "raw", "recent_grads.csv"))
 majors_cats <- majors |>
   mutate(women_cat = factor(ShareWomen >= 0.5,
                             labels = c("Male Dominated Majors", "Women Dominated Majors")),
-         #convert porportions intoo percentages
+         #convert porportions into percentages
          unempl_pct = Unemployment_rate * 100,
          women_pct = ShareWomen * 100
          )
