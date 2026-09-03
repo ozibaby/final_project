@@ -120,10 +120,7 @@ table2
 ```
 
 For every one percent of women in a major, the typical pay changes by $`r inline_text(table2, variable = "women_pct", pattern = "{estimate}")` USD.
-
-The model estimates that for every one percentage point more women in a major,
-typical pay is about $304 lower. Put another way, a major with 10 percent more
-women is expected to pay roughly $3,000 less. The p-value is below 0.001,
+Put another way, a major with 10 percent more women is expected to pay roughly $3,000 less. The p-value is below 0.001,
 which means a pattern this strong would be very unlikely to appear by chance
 alone. The unemployment rate, by contrast, has a p-value of 0.2 and a range
 that includes zero, so this data cannot say whether it is related to pay at all.
